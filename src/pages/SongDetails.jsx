@@ -11,7 +11,7 @@ const SongDetails = () => {
   const { data: songData, isFetching: isFetchingSongDetails } =
     useGetSongDetailsQuery({ songid });
 
-  function getLyricsLines(songData) {
+  const getLyricsLines = (songData) => {
     if (!songData) {
       return <></>;
     }
@@ -28,7 +28,7 @@ const SongDetails = () => {
     return (
       <p className="text-gray-400 text-base my1">Sorry, no lyrics found!</p>
     );
-  }
+  };
 
   return (
     <div className="flex- flex-col">
